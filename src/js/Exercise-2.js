@@ -58,15 +58,6 @@ var grids_100 = L.tileLayer.wms("https://tucbs-public-api.csb.gov.tr/trk_cografi
     transparent: true,
     attribution: "100K Grids"
 });
-
-var cdp_abi = L.tileLayer.wms("https://tucbs-public-api.csb.gov.tr/csb_cdp_abi_wmts", {
-    layers: '0',
-    format: 'image/png',
-    transparent: true,
-    attribution: "Plan"
-});
-
-
 var baseLayers;
 baseLayers = {
     "Uydu Haritasi": uyduharitasi,
@@ -79,7 +70,6 @@ var overlays = {
     "Grid 25K": grids_25,
     "Grid 100K": grids_100,
     "Türkiye SRTM": srtm_tur,
-    "Antalya-Burdur-Isparta Çevre Düzeni Planı": cdp_abi,
 }
 var AllLayers = L.control.layers(baseLayers, overlays).addTo(map);
 L.control.betterscale().addTo(map);
